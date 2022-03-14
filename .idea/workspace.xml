@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f6910e76-1f34-455b-8b63-2bcc98fa9ae3" name="Default Changelist" comment="Added files">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiscordBots.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Time_Bot_Discord.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="public-variables" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="SOFT" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/.idea/workspace.xml" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="23WokJG1besylwkvPakMHCss4zb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\Desktop\Coding\DiscordBots\heavy_variables" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Time_Bot_Discord" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DiscordBots" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Time_Bot_Discord.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Time_Bot_Discord" />
+        <item itemvalue="Python.Time_Bot_Discord" />
+        <item itemvalue="Python.Time_Bot_Discord" />
+        <item itemvalue="Python.Time_Bot_Discord" />
+        <item itemvalue="Python.Time_Bot_Discord" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f6910e76-1f34-455b-8b63-2bcc98fa9ae3" name="Default Changelist" comment="" />
+      <created>1641859345692</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1641859345692</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Added files">
+      <created>1642275426727</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642275426727</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added files">
+      <created>1642278626680</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642278626680</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added files">
+      <created>1642280208177</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642280208177</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added files">
+      <created>1642288299730</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1642288299730</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added files">
+      <created>1642288631630</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642288631630</updated>
+    </task>
+    <task id="LOCAL-00006" summary="cool">
+      <created>1642457475171</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1642457475171</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Set .gitignore to sensitive files">
+      <created>1642808891634</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1642808891634</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Set .gitignore to sensitive files">
+      <created>1642809529042</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1642809529042</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Set .gitignore to sensitive files">
+      <created>1642809659177</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1642809659177</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Set .gitignore to sensitive files">
+      <created>1642809701474</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1642809701474</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Token">
+      <created>1642810432485</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1642810432485</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Token">
+      <created>1642810575898</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1642810575898</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Token">
+      <created>1642811683053</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1642811683053</updated>
+    </task>
+    <task id="LOCAL-00014" summary="okay">
+      <created>1642813980451</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1642813980451</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fixed a lot of things, anti-bug!&#10;&#10;YOOOO">
+      <created>1643943080300</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1643943080300</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Created VC roles">
+      <created>1646273564549</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1646273564549</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added embeds to checktime">
+      <created>1646790816068</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1646790816069</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added embeds to checktime">
+      <created>1646790890370</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1646790890370</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Added leaderboard (doesn't work)">
+      <created>1647117083466</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1647117083466</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Fixed ctx.send">
+      <created>1647122152381</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1647122152381</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Fixed avatar error">
+      <created>1647122946653</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1647122946653</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Testing">
+      <created>1647129823819</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1647129823819</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Testing">
+      <created>1647130010007</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1647130010007</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Fix process (1)">
+      <created>1647133201360</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1647133201360</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/DiscordBot" />
+      <path value="$PROJECT_DIR$/repo" />
+      <path value="$PROJECT_DIR$/time-bot-discord-001" />
+    </ignored-roots>
+    <MESSAGE value="Added files" />
+    <MESSAGE value="cool" />
+    <MESSAGE value="Set .gitignore to sensitive files" />
+    <MESSAGE value="Token" />
+    <MESSAGE value="okay" />
+    <MESSAGE value="Fixed a lot of things, anti-bug!&#10;&#10;YOOOO" />
+    <MESSAGE value="Created VC roles" />
+    <MESSAGE value="Added embeds to checktime" />
+    <MESSAGE value="Added leaderboard (doesn't work)" />
+    <MESSAGE value="Fixed ctx.send" />
+    <MESSAGE value="Fixed avatar error" />
+    <MESSAGE value="Testing" />
+    <MESSAGE value="Fix process (1)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix process (1)" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="237" y="228" width="561" height="272" key="#Notifications" timestamp="1643943180603">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="237" y="228" width="561" height="272" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1643943180603" />
+    <state x="405" y="167" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1641859830295">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="405" y="167" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1641859830295" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1646351628958">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1646351628958" />
+    <state width="1325" height="223" key="GridCell.Tab.0.bottom" timestamp="1647210827425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1325" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1647210827425" />
+    <state width="1325" height="223" key="GridCell.Tab.0.center" timestamp="1647210827425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1325" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1647210827425" />
+    <state width="1325" height="223" key="GridCell.Tab.0.left" timestamp="1647210827425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1325" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1647210827425" />
+    <state width="1325" height="223" key="GridCell.Tab.0.right" timestamp="1647210827425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1325" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1647210827425" />
+    <state width="1325" height="223" key="GridCell.Tab.1.bottom" timestamp="1647210827426">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1325" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1647210827426" />
+    <state width="1325" height="223" key="GridCell.Tab.1.center" timestamp="1647210827425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1325" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1647210827425" />
+    <state width="1325" height="223" key="GridCell.Tab.1.left" timestamp="1647210827425">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1325" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1647210827425" />
+    <state width="1325" height="223" key="GridCell.Tab.1.right" timestamp="1647210827426">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1325" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1647210827426" />
+    <state x="449" y="85" key="RollbackChangesDialog" timestamp="1642810162579">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="449" y="85" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1642810162579" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1647218695222">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1647218695222" />
+    <state x="530" y="279" key="VCS.ChangelistChooser" timestamp="1642813851614">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="530" y="279" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1642813851614" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1646790896695">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1646790896695" />
+    <state x="488" y="279" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1642809909320">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="279" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1642809909320" />
+    <state x="482" y="226" key="git4idea.rebase.GitRebaseDialog" timestamp="1642809728241">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="482" y="226" key="git4idea.rebase.GitRebaseDialog/0.0.1366.728@0.0.1366.728" timestamp="1642809728241" />
+    <state x="457" y="255" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1642809763669">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="457" y="255" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728@0.0.1366.728" timestamp="1642809763669" />
+    <state x="443" y="154" key="git4idea.ui.GitUnstashDialog" timestamp="1642809740817">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="443" y="154" key="git4idea.ui.GitUnstashDialog/0.0.1366.728@0.0.1366.728" timestamp="1642809740817" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1642809919439">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1642809919439" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1642810020266">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1642810020266" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Time_Bot_Discord.py</url>
+          <line>71</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
