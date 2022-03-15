@@ -26,7 +26,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f6910e76-1f34-455b-8b63-2bcc98fa9ae3" name="Default Changelist" comment="Added files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Time_Bot_Discord.py" beforeDir="false" afterPath="$PROJECT_DIR$/Time_Bot_Discord.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647220569810</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added intents.messages">
+      <created>1647303603584</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1647303603585</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -375,7 +381,8 @@
     <MESSAGE value="Testing" />
     <MESSAGE value="Fix process (1)" />
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="Added intents.messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added intents.messages" />
   </component>
   <component name="WindowStateProjectService">
     <state x="237" y="228" width="561" height="272" key="#Notifications" timestamp="1643943180603">
@@ -434,10 +441,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="530" y="279" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1642813851614" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1647220575461">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1647303683003">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1647220575461" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1647303683003" />
     <state x="488" y="279" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1642809909320">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -468,7 +475,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Time_Bot_Discord.py</url>
-          <line>72</line>
+          <line>73</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
