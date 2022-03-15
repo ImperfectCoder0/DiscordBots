@@ -6,9 +6,11 @@ from dotenv import load_dotenv
 from discord.ext import commands
 import re
 
+
 intents = discord.Intents.default()
 intents.members = True
 intents.presences = True
+intents.messages = True
 bot = commands.Bot(command_prefix="rCode-", intents=intents)
 
 load_dotenv("heavy_variables/environment.env")
