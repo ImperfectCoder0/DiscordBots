@@ -31,9 +31,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6910e76-1f34-455b-8b63-2bcc98fa9ae3" name="Default Changelist" comment="Added files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f6910e76-1f34-455b-8b63-2bcc98fa9ae3" name="Default Changelist" comment="Added files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -438,38 +436,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="365" y="236" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1647465689131" />
-    <state width="1323" height="222" key="GridCell.Tab.0.bottom" timestamp="1647708045466">
+    <state width="1323" height="222" key="GridCell.Tab.0.bottom" timestamp="1647708186293">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="222" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1647708045466" />
-    <state width="1323" height="222" key="GridCell.Tab.0.center" timestamp="1647708045465">
+    <state width="1323" height="222" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1647708186293" />
+    <state width="1323" height="222" key="GridCell.Tab.0.center" timestamp="1647708186293">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="222" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1647708045465" />
-    <state width="1323" height="222" key="GridCell.Tab.0.left" timestamp="1647708045465">
+    <state width="1323" height="222" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1647708186293" />
+    <state width="1323" height="222" key="GridCell.Tab.0.left" timestamp="1647708186293">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="222" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1647708045465" />
-    <state width="1323" height="222" key="GridCell.Tab.0.right" timestamp="1647708045466">
+    <state width="1323" height="222" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1647708186293" />
+    <state width="1323" height="222" key="GridCell.Tab.0.right" timestamp="1647708186293">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="222" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1647708045466" />
-    <state width="1323" height="222" key="GridCell.Tab.1.bottom" timestamp="1647708045945">
+    <state width="1323" height="222" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1647708186293" />
+    <state width="1323" height="222" key="GridCell.Tab.1.bottom" timestamp="1647708191147">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="222" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1647708045945" />
-    <state width="1323" height="222" key="GridCell.Tab.1.center" timestamp="1647708045945">
+    <state width="1323" height="222" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1647708191147" />
+    <state width="1323" height="222" key="GridCell.Tab.1.center" timestamp="1647708191147">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="222" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1647708045945" />
-    <state width="1323" height="222" key="GridCell.Tab.1.left" timestamp="1647708045945">
+    <state width="1323" height="222" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1647708191147" />
+    <state width="1323" height="222" key="GridCell.Tab.1.left" timestamp="1647708191147">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="222" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1647708045945" />
-    <state width="1323" height="222" key="GridCell.Tab.1.right" timestamp="1647708045945">
+    <state width="1323" height="222" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1647708191147" />
+    <state width="1323" height="222" key="GridCell.Tab.1.right" timestamp="1647708191147">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="222" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1647708045945" />
+    <state width="1323" height="222" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1647708191147" />
     <state x="449" y="85" key="RollbackChangesDialog" timestamp="1642810162579">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -516,8 +514,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Time_Bot_Discord.py</url>
-          <line>66</line>
-          <option name="timeStamp" value="4" />
+          <line>36</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -8,7 +8,7 @@ import re
 
 
 intents = discord.Intents.all()
-bot = discord.Bot()
+bot = discord.Bot(intents=intents)
 
 
 load_dotenv("heavy_variables/environment.env")
