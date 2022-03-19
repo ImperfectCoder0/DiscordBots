@@ -201,7 +201,7 @@ async def rate(ctx):
     if class_ == []:
         class_.append("Normal")
     output = '\n'.join(class_)
-    embed.add_field(name="Class(es)", value=class_)
+    embed.add_field(name="Class(es)", value=output)
     await ctx.respond(embed=embed)
 
 
