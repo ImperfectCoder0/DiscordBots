@@ -1,26 +1,23 @@
+import random
 from datetime import datetime, timedelta
 import os
 import threading
 import discord
 from dotenv import load_dotenv
-from discord.ext import commands
 import re
 
 
-intents = discord.Intents.default()
-intents.members = True
-intents.presences = True
-intents.messages = True
-bot = commands.Bot(command_prefix="rCode-", intents=intents)
+intents = discord.Intents.all()
+bot = discord.Bot()
+
 
 load_dotenv("heavy_variables/environment.env")
 TOKEN = os.getenv('DISCORD_TOKEN')
-
+guild_ids = bot.guilds
 start_time = None
 running = True
 act_list = {}
 __version__ = "0.0.8.001"
-
 
 @bot.event
 async def on_ready():
@@ -45,51 +42,43 @@ async def on_ready():
     runThread.start()
 
 
-@bot.command()
-async def checktime(ctx, member: discord.Member):
+@bot.slash_command(guild_ids=guild_ids, name='checktime', description='Check the time that someone is online')
+async def checktime(ctx, member: discord.Option(discord.Member, "Enter someone", required=True)):
     global act_list
     print(member)
     if not await cooldown(ctx, ctx.author, 4, 1):
         return
-    try:
-        print("here")
-        embed = discord.Embed(title=f"Checking time of... {member.display_name}",
-                              description=f"Percent of time: {((sum(act_list[member][3], timedelta())).total_seconds()) / ((datetime.now() - start_time).total_seconds()) * 100: .2f}%")
-        embed.set_thumbnail(url=member.avatar)
-        embed.add_field(name="Start Time", value=start_time.strftime("%H:%M:%S.%f"[:] + " at %Y-%m-%d"))
-        embed.set_footer(text="Note: Bot is in experimental phase, and times may reset during the day.\nAll data is not fully accurate.")
+    print("here")
+    embed = discord.Embed(title=f"Checking time of... {member.display_name}",
+                          description=f"Percent of time: {((sum(act_list[member][3], timedelta())).total_seconds()) / ((datetime.now() - start_time).total_seconds()) * 100: .2f}%")
+    embed.set_thumbnail(url=member.avatar)
+    embed.add_field(name="Start Time", value=start_time.strftime("%H:%M:%S.%f"[:-4] + " UTC" + " at %Y-%m-%d"))
+    embed.set_footer(text="Note: Bot is in experimental phase, and times may reset during the day.\nAll data is not fully accurate.")
 
 
-        await ctx.send(embed=embed)
-        act_list[ctx.author][2][1] = datetime.now()
-    except discord.ext.commands.errors.MemberNotFound as NoMember:
-        await ctx.send(f"Either you're trying to checktime a bot, or the person you just @ doesn't exist.")
-        await ctx.send(f"Actual error code: \n`{NoMember}`")
+    await ctx.respond(embed=embed)
+    act_list[ctx.author][2][1] = datetime.now()
 
-@bot.command()
-async def leaderboard(ctx):
-    global act_list
-    if start_time < datetime.now()+timedelta(seconds=4):
-        await ctx.send("I don't see what you're trying to do here. \nThe bot just started, and you're immediately asking for stats! \nWait a minute!")
-        return
-    timelist = []
-    for person in act_list.keys():
-        if person.guild == ctx.guild:
-            print(act_list[person][3])
-            timelist.append((person.name, sum(act_list[person][3])))
-
-    print(timelist)
+# @bot.command()
+# async def leaderboard(ctx):
+#     global act_list
+#     if start_time < datetime.now()+timedelta(seconds=4):
+#         await ctx.respond("I don't see what you're trying to do here. \nThe bot just started, and you're immediately asking for stats! \nWait a minute!")
+#         return
+#     timelist = []
+#     for person in act_list.keys():
+#         if person.guild == ctx.guild:
+#             print(act_list[person][3])
+#             timelist.append((person.name, sum(act_list[person][3])))
+# 
+#     print(timelist)
 
 
-@bot.command()
+@bot.slash_command(name='starttime', description='Check when the bot started')
 async def starttime(ctx):
     print("Starttime")
-    await ctx.send(f"Start time of {__version__}: {start_time}")
+    await ctx.respond(f"Start time of {__version__}: {start_time} UTC")
 
-@bot.command()
-async def check_if_real(ctx):
-    # you have to send rCode-check_if_real
-    await ctx.send("I am real")
 
 @bot.event
 async def on_voice_state_update(member, before, after):
@@ -139,7 +128,7 @@ async def cooldown(ctx, member, seconds, pos):
     global act_list
     if datetime.now() - act_list[member][2][pos] <= timedelta(seconds=seconds):
         embedVar = discord.Embed(title="Man, you gotta slow it down!", description=f"You still have {timedelta(seconds=seconds) - (datetime.now() - act_list[member][2][pos])} left!", color=0x044322)
-        await ctx.send(embed=embedVar)
+        await ctx.respond(embed=embedVar)
         return False
     else:
         return True
@@ -162,6 +151,17 @@ def run():
                     if len(act_list[member_][3]) > 300:
                         act_list[member_][3][0] = sum(act_list[member_][3])
 
+@bot.slash_command()
+def rate(ctx):
+    embed = discord.Embed(title="You rate as:", description=f"""
+    Strength - {random.randrange(0, 100)}%
+    Stealth - {random.randrange(0, 100)}%
+    Intelligence - {random.randrange(0, 100)}%
+    Wisdom - {random.randrange(0, 100)}%
+    Charisma - {random.randrange(0, 100)}%
+
+    """)
+    ctx.respond(embed=embed)
 
 runThread = threading.Thread(target=run)
 
