@@ -173,7 +173,7 @@ async def rate(ctx):
 
     """)
 
-    class_ = []
+    class_ = ["Normal"]
     if values[0] <= 150 and values[2] >= 900:
         class_.append("Brain")
         if values[2] == 1000:
@@ -188,9 +188,9 @@ async def rate(ctx):
         class_.append("Reluctant Evil")
         if values[6] <= 150:
             class_.append("Pure Evil")
-    if values[6] <= 300:
+    if values[6] >= 300:
         class_.append("Reluctant Good")
-        if values[6] <= 150:
+        if values[6] >= 150:
             class_.append("Pure Good")
 
     embed.add_field(name="Class(es)", value=class_)
