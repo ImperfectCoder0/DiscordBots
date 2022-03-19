@@ -42,7 +42,7 @@ async def on_ready():
     runThread.start()
 
 
-@bot.slash_command(guild_ids=guild_ids, name='checktime', description='Check the time that someone is online')
+@bot.slash_command(name='checktime', description='Check the time that someone is online')
 async def checktime(ctx, member: discord.Option(discord.Member, "Enter someone", required=True)):
     global act_list
     print(member)
