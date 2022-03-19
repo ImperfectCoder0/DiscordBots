@@ -152,7 +152,7 @@ def run():
                         act_list[member_][3][0] = sum(act_list[member_][3])
 
 @bot.slash_command(name='rate', description='Rates you!')
-def rate(ctx):
+async def rate(ctx):
     embed = discord.Embed(title="You rate as:", description=f"""
     Strength - {random.randrange(0, 100)}%
     Stealth - {random.randrange(0, 100)}%
