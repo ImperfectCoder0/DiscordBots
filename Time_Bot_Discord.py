@@ -5,6 +5,7 @@ import threading
 import discord
 from dotenv import load_dotenv
 import re
+from discord.ext import commands
 
 
 intents = discord.Intents.all()
@@ -52,9 +53,9 @@ async def checktime(ctx, member: discord.Option(discord.Member, "Enter someone",
     embed = discord.Embed(title=f"Checking time of... {member.display_name}",
                           description=f"Percent of time: {((sum(act_list[member][3], timedelta())).total_seconds()) / ((datetime.now() - start_time).total_seconds()) * 100: .2f}%")
     try:
-        embed.set_thumbnail(url=member.avatar)
-    except BaseException:
-        embed.set_thumbnail(url=member.default_avatar)
+        embed.set_thumbnail(url=member.avatar.url)
+    except:
+        embed.set_thumbnail(url=member.default_avatar.url)
     embed.add_field(name="Start Time", value=start_time.strftime("%H:%M:%S" + " UTC" + " at %Y-%m-%d"))
     embed.set_footer(text="Note: Bot is in experimental phase, and times may reset during the day.\nAll data is not fully accurate.")
 
