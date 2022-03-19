@@ -157,14 +157,43 @@ def run():
 
 @bot.slash_command(name='rate', description='Rates you!')
 async def rate(ctx):
+    values = [random.randrange(0, 1000), random.randrange(0, 1000),
+              random.randrange(0, 1000), random.randrange(0, 1000),
+              random.randrange(0, 1000), random.randrange(0, 1000),
+              random.randrange(0, 1000)]
     embed = discord.Embed(title="You rate as:", description=f"""
-    Strength - {random.randrange(0, 100)}%
-    Stealth - {random.randrange(0, 100)}%
-    Intelligence - {random.randrange(0, 100)}%
-    Wisdom - {random.randrange(0, 100)}%
-    Charisma - {random.randrange(0, 100)}%
+    Strength - {values[0]/10}%
+    Stealth - {values[1]/10}%
+    Intelligence - {values[2]/10}%
+    Wisdom - {values[3]/10}%
+    Charisma - {values[4]/10}%
+    Persistence - {values[5]/10}%
+    Good - {values[6]/10}%
+    Evil - {(1000 - values[6])/10}%
 
     """)
+
+    class_ = []
+    if values[0] <= 150 and values[2] >= 900:
+        class_.append("Brain")
+        if values[2] == 1000:
+            class_.append("Super Brain")
+    if values[0] >= 750 and values[1] >= 850 and values[2] >= 900 and values[5] >= 900:
+        class_.append("Agent")
+        if values[0] == 1000 and values[1] == 1000 and values[2] == 1000 and values[5] == 1000:
+            class_.append("Super Agent")
+    if values[0] >= 950 and values[5] >= 750:
+        class_.append("Warrior")
+    if values[6] <= 300:
+        class_.append("Reluctant Evil")
+        if values[6] <= 150:
+            class_.append("Pure Evil")
+    if values[6] <= 300:
+        class_.append("Reluctant Good")
+        if values[6] <= 150:
+            class_.append("Pure Good")
+
+    embed.add_field(name="Class(es)", value=class_)
     await ctx.respond(embed=embed)
 
 
