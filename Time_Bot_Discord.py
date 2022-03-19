@@ -151,7 +151,7 @@ def run():
                     if len(act_list[member_][3]) > 300:
                         act_list[member_][3][0] = sum(act_list[member_][3])
 
-@bot.slash_command()
+@bot.slash_command(name='rate', description='Rates you!')
 def rate(ctx):
     embed = discord.Embed(title="You rate as:", description=f"""
     Strength - {random.randrange(0, 100)}%
