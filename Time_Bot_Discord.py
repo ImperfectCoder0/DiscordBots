@@ -173,7 +173,7 @@ async def rate(ctx):
 
     """)
 
-    class_ = ["Normal"]
+    class_ = []
     if values[0] <= 150 and values[2] >= 900:
         class_.append("Brain")
         if values[2] == 1000:
