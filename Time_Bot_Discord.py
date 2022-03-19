@@ -28,7 +28,7 @@ async def on_ready():
     # 3 -> Online Time
 
     for guilds in bot.guilds:
-        for members in guilds.members:
+        for members in guilds.fetch_members():
             if members not in act_list.keys():
                 act_list[members] = [None, None, None, None]
                 act_list[members][0] = datetime.now()
