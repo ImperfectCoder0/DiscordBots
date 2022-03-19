@@ -28,7 +28,7 @@ async def on_ready():
     # 3 -> Online Time
 
     for guilds in bot.guilds:
-        for members in guilds.fetch_members():
+        for members in guilds.members:
             if members not in act_list.keys():
                 act_list[members] = [None, None, None, None]
                 act_list[members][0] = datetime.now()
@@ -51,8 +51,11 @@ async def checktime(ctx, member: discord.Option(discord.Member, "Enter someone",
     print("here")
     embed = discord.Embed(title=f"Checking time of... {member.display_name}",
                           description=f"Percent of time: {((sum(act_list[member][3], timedelta())).total_seconds()) / ((datetime.now() - start_time).total_seconds()) * 100: .2f}%")
-    embed.set_thumbnail(url=member.avatar)
-    embed.add_field(name="Start Time", value=start_time.strftime("%H:%M:%S.%f"[:-4] + " UTC" + " at %Y-%m-%d"))
+    try:
+        embed.set_thumbnail(url=member.avatar)
+    except BaseException:
+        embed.set_thumbnail(url=member.default_avatar)
+    embed.add_field(name="Start Time", value=start_time.strftime("%H:%M:%S" + " UTC" + " at %Y-%m-%d"))
     embed.set_footer(text="Note: Bot is in experimental phase, and times may reset during the day.\nAll data is not fully accurate.")
 
 
@@ -162,6 +165,9 @@ async def rate(ctx):
 
     """)
     await ctx.respond(embed=embed)
+
+
+
 
 runThread = threading.Thread(target=run)
 
