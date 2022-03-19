@@ -188,9 +188,9 @@ async def rate(ctx):
         class_.append("Reluctant Evil")
         if values[6] <= 150:
             class_.append("Pure Evil")
-    if values[6] >= 300:
+    if values[6] >= 700:
         class_.append("Reluctant Good")
-        if values[6] >= 150:
+        if values[6] >= 850:
             class_.append("Pure Good")
 
     embed.add_field(name="Class(es)", value=class_)
