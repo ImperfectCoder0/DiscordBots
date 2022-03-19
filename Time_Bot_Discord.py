@@ -161,7 +161,7 @@ async def rate(ctx):
     Charisma - {random.randrange(0, 100)}%
 
     """)
-    ctx.respond(embed=embed)
+    await ctx.respond(embed=embed)
 
 runThread = threading.Thread(target=run)
 
