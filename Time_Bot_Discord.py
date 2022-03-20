@@ -64,30 +64,29 @@ async def checktime(ctx, member: discord.Option(discord.Member, "Enter someone",
 @bot.slash_command(name='leaderboard', description='Returns the leaderboard')
 async def leaderboard(ctx):
     global act_list, people_list, viewing, scroll, next_, previous, first, last, stop
+    print("CALLED")
     timelist = []
     for person in act_list.keys():
         if person in ctx.guild.members and not person.bot:
             timelist.append((sum(act_list[person][3], timedelta(0)), person.name))
 
     timelist = sorted(timelist, reverse=True)
-    scroll = 10
+    scroll = 0
     next_ = discord.ui.Button(label="Next", style=discord.ButtonStyle.blurple, emoji='▶')
     previous = discord.ui.Button(label="Previous", style=discord.ButtonStyle.blurple, emoji='◀')
     first = discord.ui.Button(label="First", style=discord.ButtonStyle.blurple, emoji='⏮')
     last = discord.ui.Button(label="Last", style=discord.ButtonStyle.blurple, emoji='⏭')
     stop = discord.ui.Button(label="Stop", style=discord.ButtonStyle.red, emoji='🛑')
 
-    try:
-        viewing = timelist[scroll:scroll + 10]
-    except IndexError:
-        viewing = timelist[scroll:]
-
+    viewing = timelist[scroll:scroll + 10]
 
     async def reload():
         global viewing, scroll
         people_list = ''
         embed = discord.Embed(title="⚔ Leaderboard ⚔", description="Who's first?")
+        print(viewing, scroll)
         for place, member in enumerate(viewing):
+            print(member, place)
             print(f'{scroll + place + 1}. {member[1]} -> {member[0]} \n')
             people_list = people_list + f'{scroll + place + 1}. {member[1]} -> {member[0]} \n'
         embed.add_field(name="Places", value=people_list)
@@ -106,13 +105,14 @@ async def leaderboard(ctx):
     async def scroll_pos(interaction: discord.Interaction):
         global scroll, viewing, next_, previous, first, last, stop
         scroll += 10
-        if len(timelist) // 10 == (scroll // 10):
+        if (len(timelist) // 10) - 1 <= scroll // 10:
             viewing = timelist[scroll:]
             next_.disabled = True
             last.disabled = True
             previous.disabled = False
             first.disabled = False
         else:
+
             viewing = timelist[scroll:scroll + 10]
         embed = await reload()
         view = await create_buttons()
@@ -175,7 +175,7 @@ async def leaderboard(ctx):
     stop.callback = end_int
     previous.disabled = True
     first.disabled = True
-    if not len(timelist) // 10 == scroll // 10:
+    if not (len(timelist) // 10) - 1 < scroll // 10:
         last.disabled = False
         next_.disabled = False
     else:
