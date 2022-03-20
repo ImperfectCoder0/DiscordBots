@@ -1,16 +1,14 @@
-import random
-from datetime import datetime, timedelta
 import os
+import random
+import re
 import threading
+from datetime import datetime, timedelta
+
 import discord
 from dotenv import load_dotenv
-import re
-from discord.ext import commands
-
 
 intents = discord.Intents.all()
 bot = discord.Bot(intents=intents)
-
 
 load_dotenv("heavy_variables/environment.env")
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -34,7 +32,7 @@ async def on_ready():
                 act_list[members] = [None, None, None, None]
                 act_list[members][0] = datetime.now()
                 act_list[members][1] = False
-                act_list[members][2] = [datetime.now(), datetime.now()-timedelta(minutes=30), datetime.now()-timedelta(minutes=30)]
+                act_list[members][2] = [datetime.now(), datetime.now() - timedelta(minutes=30), datetime.now() - timedelta(minutes=30)]
                 act_list[members][3] = [timedelta(seconds=0)]
 
     start_time = datetime.now()
@@ -59,23 +57,129 @@ async def checktime(ctx, member: discord.Option(discord.Member, "Enter someone",
     embed.add_field(name="Start Time", value=start_time.strftime("%H:%M:%S" + " UTC" + " at %Y-%m-%d"))
     embed.set_footer(text="Note: Bot is in experimental phase, and times may reset during the day.\nAll data is not fully accurate.")
 
-
     await ctx.respond(embed=embed)
     act_list[ctx.author][2][1] = datetime.now()
 
-# @bot.command()
-# async def leaderboard(ctx):
-#     global act_list
-#     if start_time < datetime.now()+timedelta(seconds=4):
-#         await ctx.respond("I don't see what you're trying to do here. \nThe bot just started, and you're immediately asking for stats! \nWait a minute!")
-#         return
-#     timelist = []
-#     for person in act_list.keys():
-#         if person.guild == ctx.guild:
-#             print(act_list[person][3])
-#             timelist.append((person.name, sum(act_list[person][3])))
-# 
-#     print(timelist)
+
+@bot.slash_command(name='leaderboard', description='Returns the leaderboard')
+async def leaderboard(ctx):
+    global act_list, people_list, viewing, scroll, next_, previous, first, last, stop
+    timelist = []
+    for person in act_list.keys():
+        if person in ctx.guild.members and not person.bot:
+            timelist.append((sum(act_list[person][3], timedelta(0)), person.name))
+
+    timelist = sorted(timelist, reverse=True)
+    scroll = 0
+    next_ = discord.ui.Button(label="Next", style=discord.ButtonStyle.blurple, emoji='▶')
+    previous = discord.ui.Button(label="Previous", style=discord.ButtonStyle.blurple, emoji='◀')
+    first = discord.ui.Button(label="First", style=discord.ButtonStyle.blurple, emoji='⏮')
+    last = discord.ui.Button(label="Last", style=discord.ButtonStyle.blurple, emoji='⏭')
+    stop = discord.ui.Button(label="Stop", style=discord.ButtonStyle.red, emoji='🛑')
+
+    try:
+        viewing = timelist[scroll:scroll + 10]
+    except IndexError:
+        viewing = timelist[scroll:]
+    people_list = ''
+
+    async def reload():
+        global people_list, viewing
+        embed = discord.Embed(title="⚔ Leaderboard ⚔", description="Who's first?")
+        for place, member in enumerate(viewing):
+            print(f'{scroll + place + 1}. {member[1]} -> {member[0]} \n')
+            people_list = people_list + f'{scroll + place + 1}. {member[1]} -> {member[0]} \n'
+        embed.add_field(name="Places", value=people_list)
+        return embed
+
+
+    async def create_buttons():
+        view = discord.ui.View()
+        view.add_item(first)
+        view.add_item(previous)
+        view.add_item(next_)
+        view.add_item(last)
+        view.add_item(stop)
+        return view
+
+    async def scroll_pos(interaction: discord.Interaction):
+        global scroll, viewing, next_, previous, first, last, stop
+        scroll += 10
+        if len(timelist) // 10 == scroll // 10:
+            viewing = timelist[scroll:]
+            next_.disabled = True
+            last.disabled = True
+            previous.disabled = False
+            first.disabled = False
+        else:
+            viewing = timelist[scroll:scroll + 10]
+        embed = await reload()
+        view = await create_buttons()
+        await interaction.response.edit_message(embed=embed, view=view)
+
+
+    async def scroll_neg(interaction: discord.Interaction):
+        global scroll, viewing, next_, previous, first, last, stop
+        viewing = timelist[scroll:scroll + 10]
+        embed = await reload()
+        if scroll == 0:
+            previous.disabled = True
+            first.disabled = True
+            next_.disabled = False
+            last.disabled = False
+        view = await create_buttons()
+        await interaction.response.edit_message(embed=embed, view=view)
+
+    async def scroll_first(interaction: discord.Interaction):
+        global scroll, viewing, next_, previous, first, last, stop
+        scroll = 0
+        viewing = timelist[scroll:scroll + 10]
+        embed = await reload()
+        previous.disabled = True
+        first.disabled = True
+        last.disabled = False
+        next_.disabled = False
+        view = await create_buttons()
+        await interaction.response.edit_message(embed=embed, view=view)
+
+    async def scroll_last(interaction: discord.Interaction):
+        global scroll, viewing, next_, previous, first, last, stop
+        scroll = (len(timelist) // 10) * 10
+        viewing = timelist[scroll:]
+        embed = await reload()
+        previous.disabled = False
+        first.disabled = False
+        next_.disabled = True
+        last.disabled = True
+        view = await create_buttons()
+        await interaction.response.edit_message(embed=embed, view=view)
+
+    async def end_int(interaction):
+        global next_, previous, first, last, stop
+        previous.disabled = True
+        first.disabled = True
+        next_.disabled = True
+        last.disabled = True
+        stop.disabled = True
+
+
+    next_.callback = scroll_pos
+    previous.callback = scroll_neg
+    first.callback = scroll_first
+    last.callback = scroll_last
+    stop.callback = end_int
+    previous.disabled = True
+    first.disabled = True
+    acting_scroll = 1
+    if not len(timelist) // 10 == acting_scroll:
+        last.disabled = False
+        next_.disabled = False
+    else:
+        last.disabled = True
+        next_.disabled = True
+    embed = await reload()
+    view = await create_buttons()
+    await ctx.respond(view=view, embed=embed)
 
 
 @bot.slash_command(name='starttime', description='Check when the bot started')
@@ -131,7 +235,8 @@ def check_channel(channel_name, server):
 async def cooldown(ctx, member, seconds, pos):
     global act_list
     if datetime.now() - act_list[member][2][pos] <= timedelta(seconds=seconds):
-        embedVar = discord.Embed(title="Man, you gotta slow it down!", description=f"You still have {timedelta(seconds=seconds) - (datetime.now() - act_list[member][2][pos])} left!", color=0x044322)
+        embedVar = discord.Embed(title="Man, you gotta slow it down!",
+                                 description=f"You still have {timedelta(seconds=seconds) - (datetime.now() - act_list[member][2][pos])} left!", color=0x044322)
         await ctx.respond(embed=embedVar)
         return False
     else:
@@ -155,6 +260,7 @@ def run():
                     if len(act_list[member_][3]) > 300:
                         act_list[member_][3][0] = sum(act_list[member_][3])
 
+
 @bot.slash_command(name='rate', description='Rates you!')
 async def rate(ctx):
     values = [random.randrange(0, 1000), random.randrange(0, 1000),
@@ -162,14 +268,14 @@ async def rate(ctx):
               random.randrange(0, 1000), random.randrange(0, 1000),
               random.randrange(0, 1000)]
     embed = discord.Embed(title="You rate as:", description=f"""
-    Strength - {values[0]/10}%
-    Stealth - {values[1]/10}%
-    Intelligence - {values[2]/10}%
-    Wisdom - {values[3]/10}%
-    Charisma - {values[4]/10}%
-    Persistence - {values[5]/10}%
-    Good - {values[6]/10}%
-    Evil - {(1000 - values[6])/10}%
+    Strength - {values[0] / 10}%
+    Stealth - {values[1] / 10}%
+    Intelligence - {values[2] / 10}%
+    Wisdom - {values[3] / 10}%
+    Charisma - {values[4] / 10}%
+    Persistence - {values[5] / 10}%
+    Good - {values[6] / 10}%
+    Evil - {(1000 - values[6]) / 10}%
 
     """)
 
@@ -198,13 +304,15 @@ async def rate(ctx):
             class_.append("Pure Good")
     if values[3] >= 800 and values[2] >= 800:
         class_.append("Diplomat")
-    if class_ == []:
+    if values[0] <= 200:
+        class_.append("Weakling")
+    if values[2] >= 700:
+        class_.append("Smart")
+    if not class_:
         class_.append("Normal")
     output = '\n'.join(class_)
     embed.add_field(name="Class(es)", value=output)
     await ctx.respond(embed=embed)
-
-
 
 
 runThread = threading.Thread(target=run)
