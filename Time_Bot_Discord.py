@@ -29,11 +29,8 @@ async def on_ready():
     for guilds in bot.guilds:
         for members in guilds.members:
             if members not in act_list.keys():
-                act_list[members] = [None, None, None, None]
-                act_list[members][0] = datetime.now()
-                act_list[members][1] = False
-                act_list[members][2] = [datetime.now(), datetime.now() - timedelta(minutes=30), datetime.now() - timedelta(minutes=30)]
-                act_list[members][3] = [timedelta(seconds=0)]
+                act_list[members] = [datetime.now(), False,
+                                     [datetime.now(), datetime.now() - timedelta(minutes=30), datetime.now() - timedelta(minutes=30)], [timedelta(seconds=0)]]
 
     start_time = datetime.now()
     print("Ready!")
@@ -315,6 +312,16 @@ async def rate(ctx):
     embed.add_field(name="Class(es)", value=output)
     await ctx.respond(embed=embed)
 
+@bot.event
+async def on_member_join(member):
+    global act_list
+    act_list[member] = [datetime.now(), False,
+                         [datetime.now(), datetime.now() - timedelta(minutes=30), datetime.now() - timedelta(minutes=30)], [timedelta(seconds=0)]]
+
+@bot.event
+async def on_member_remove(member):
+    global act_list
+    del act_list[member]
 
 runThread = threading.Thread(target=run)
 
