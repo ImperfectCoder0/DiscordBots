@@ -66,11 +66,11 @@ async def leaderboard(ctx):
     global act_list, people_list, viewing, scroll, next_, previous, first, last, stop
     timelist = []
     for person in act_list.keys():
-        if person in ctx.guild.members and not person.bot:
+        if person in ctx.guild.members: # and not person.bot:
             timelist.append((sum(act_list[person][3], timedelta(0)), person.name))
 
     timelist = sorted(timelist, reverse=True)
-    scroll = 0
+    scroll = 10
     next_ = discord.ui.Button(label="Next", style=discord.ButtonStyle.blurple, emoji='▶')
     previous = discord.ui.Button(label="Previous", style=discord.ButtonStyle.blurple, emoji='◀')
     first = discord.ui.Button(label="First", style=discord.ButtonStyle.blurple, emoji='⏮')
@@ -81,10 +81,11 @@ async def leaderboard(ctx):
         viewing = timelist[scroll:scroll + 10]
     except IndexError:
         viewing = timelist[scroll:]
-    people_list = ''
+
 
     async def reload():
-        global people_list, viewing
+        global viewing, scroll
+        people_list = ''
         embed = discord.Embed(title="⚔ Leaderboard ⚔", description="Who's first?")
         for place, member in enumerate(viewing):
             print(f'{scroll + place + 1}. {member[1]} -> {member[0]} \n')
@@ -105,7 +106,7 @@ async def leaderboard(ctx):
     async def scroll_pos(interaction: discord.Interaction):
         global scroll, viewing, next_, previous, first, last, stop
         scroll += 10
-        if len(timelist) // 10 == scroll // 10:
+        if len(timelist) // 10 == (scroll // 10):
             viewing = timelist[scroll:]
             next_.disabled = True
             last.disabled = True
@@ -120,6 +121,7 @@ async def leaderboard(ctx):
 
     async def scroll_neg(interaction: discord.Interaction):
         global scroll, viewing, next_, previous, first, last, stop
+        scroll -= 10
         viewing = timelist[scroll:scroll + 10]
         embed = await reload()
         if scroll == 0:
@@ -161,6 +163,9 @@ async def leaderboard(ctx):
         next_.disabled = True
         last.disabled = True
         stop.disabled = True
+        embed = await reload()
+        view = await create_buttons()
+        await interaction.response.edit_message(embed=embed, view=view)
 
 
     next_.callback = scroll_pos
@@ -170,8 +175,7 @@ async def leaderboard(ctx):
     stop.callback = end_int
     previous.disabled = True
     first.disabled = True
-    acting_scroll = 1
-    if not len(timelist) // 10 == acting_scroll:
+    if not len(timelist) // 10 == scroll // 10:
         last.disabled = False
         next_.disabled = False
     else:
