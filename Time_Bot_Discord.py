@@ -66,7 +66,7 @@ async def leaderboard(ctx):
     global act_list, people_list, viewing, scroll, next_, previous, first, last, stop
     timelist = []
     for person in act_list.keys():
-        if person in ctx.guild.members: # and not person.bot:
+        if person in ctx.guild.members and not person.bot:
             timelist.append((sum(act_list[person][3], timedelta(0)), person.name))
 
     timelist = sorted(timelist, reverse=True)
