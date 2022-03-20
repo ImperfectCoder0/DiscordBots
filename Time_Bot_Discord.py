@@ -84,10 +84,7 @@ async def leaderboard(ctx):
         global viewing, scroll
         people_list = ''
         embed = discord.Embed(title="⚔ Leaderboard ⚔", description="Who's first?")
-        print(viewing, scroll)
         for place, member in enumerate(viewing):
-            print(member, place)
-            print(f'{scroll + place + 1}. {member[1]} -> {member[0]} \n')
             people_list = people_list + f'{scroll + place + 1}. {member[1]} -> {member[0]} \n'
         embed.add_field(name="Places", value=people_list)
         return embed
@@ -105,7 +102,7 @@ async def leaderboard(ctx):
     async def scroll_pos(interaction: discord.Interaction):
         global scroll, viewing, next_, previous, first, last, stop
         scroll += 10
-        if (len(timelist) // 10) - 1 <= scroll // 10:
+        if (len(timelist) - 1) // 10 <= scroll // 10:
             viewing = timelist[scroll:]
             next_.disabled = True
             last.disabled = True
@@ -175,7 +172,7 @@ async def leaderboard(ctx):
     stop.callback = end_int
     previous.disabled = True
     first.disabled = True
-    if not (len(timelist) // 10) - 1 < scroll // 10:
+    if (len(timelist) - 1) // 10 > scroll // 10:
         last.disabled = False
         next_.disabled = False
     else:
