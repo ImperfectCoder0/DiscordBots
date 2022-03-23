@@ -99,15 +99,12 @@ async def leaderboard(ctx):
     async def scroll_pos(interaction: discord.Interaction):
         global scroll, viewing, next_, previous, first, last, stop
         scroll += 10
+        viewing = timelist[scroll: scroll + 10]
         if (len(timelist) - 1) // 10 <= scroll // 10:
-            viewing = timelist[scroll:]
             next_.disabled = True
             last.disabled = True
-            previous.disabled = False
-            first.disabled = False
-        else:
-
-            viewing = timelist[scroll:scroll + 10]
+        previous.disabled = False
+        first.disabled = False
         embed = await reload()
         view = await create_buttons()
         await interaction.response.edit_message(embed=embed, view=view)
@@ -117,12 +114,13 @@ async def leaderboard(ctx):
         global scroll, viewing, next_, previous, first, last, stop
         scroll -= 10
         viewing = timelist[scroll:scroll + 10]
-        embed = await reload()
+
         if scroll == 0:
             previous.disabled = True
             first.disabled = True
-            next_.disabled = False
-            last.disabled = False
+        next_.disabled = False
+        last.disabled = False
+        embed = await reload()
         view = await create_buttons()
         await interaction.response.edit_message(embed=embed, view=view)
 
