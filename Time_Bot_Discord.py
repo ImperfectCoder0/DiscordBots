@@ -61,7 +61,7 @@ class Timing(HighClass):
     @bridge.bridge_command(name='checktime', description='Check the time that someone is online')
     async def checktime(self, ctx, member: discord.Option(discord.Member, "Enter someone", required=True)):
         global act_list
-        if features["Track Time"]:
+        if guild_features[ctx.guild]["Track Time"]:
             print(member)
             if not await cooldown(ctx, ctx.author, 4, 1):
                 return
@@ -84,7 +84,7 @@ class Timing(HighClass):
     @bridge.bridge_command(name='leaderboard', description='Returns the leaderboard')
     async def leaderboard(self, ctx):
         global act_list, people_list, viewing, scroll, next_, previous, first, last, stop
-        if features["Track Time"]:
+        if guild_features[ctx.guild]["Track Time"]:
             print("CALLED")
             timelist = []
             for person in act_list.keys():
@@ -212,7 +212,7 @@ class Timing(HighClass):
 
 @bot.event
 async def on_voice_state_update(member, before, after):
-    if features["VC Chats"]:
+    if guild_features[member.guild]["VC Chats"]:
         if before.channel != None:
             vc = bot.get_channel(before.channel.id)
             guild = member.guild
