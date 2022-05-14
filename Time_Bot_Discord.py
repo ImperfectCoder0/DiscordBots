@@ -21,11 +21,13 @@ act_list = {}
 guild_features = {}
 features = {
     "VC Chats": True,
-    "Track Time": True
+    "Track Time": True,
+    "Debug": True
 }
 valid_features = [
     OptionChoice(name="VC Chats", value="VC Chats"),
-    OptionChoice(name="Track Time", value="Track Time")
+    OptionChoice(name="Track Time", value="Track Time"),
+    OptionChoice(name="Debug", value="Debug")
 ]
 __version__ = "0.1.0+"
 
@@ -43,7 +45,7 @@ async def on_ready():
     # 3 -> Online Time
     guild_features = {}
     for guilds in bot.guilds:
-        guild_features[guilds] = features
+        guild_features[guilds] = features.copy()
         for members in guilds.members:
             if members not in act_list.keys():
                 act_list[members] = [datetime.now(), False,
@@ -53,6 +55,7 @@ async def on_ready():
     start_time = datetime.now()
     print("Ready!")
     print(start_time)
+    print(guild_features)
     runThread.start()
 
 class Timing(HighClass):
@@ -353,10 +356,13 @@ async def on_member_remove(member):
 async def switch(ctx, feature: discord.Option(str, "Which feature are you changing?", choices=valid_features)):
     global features
     if ctx.author.guild_permissions.administrator:
+        print(guild_features[ctx.guild])
         guild_features[ctx.guild][feature] = not guild_features[ctx.guild][feature]
         await ctx.respond(f"Action Complete! Variable set to: {guild_features[ctx.guild][feature]}")
     else:
         await ctx.respond(f"You don't have permissions to commit this action.")
+
+    await ctx.respond(guild_features)
 
 
 
