@@ -7,6 +7,7 @@ from discord.ext import bridge, commands
 from discord.commands import OptionChoice
 import discord
 from dotenv import load_dotenv
+from pickle import dumps, loads
 
 intents = discord.Intents.all()
 bot = bridge.Bot(command_prefix=">>", intents=intents, help_command=commands.DefaultHelpCommand())
@@ -17,6 +18,7 @@ guild_ids = bot.guilds
 start_time = None
 running = True
 act_list = {}
+guild_features = {}
 features = {
     "VC Chats": True,
     "Track Time": True
@@ -25,7 +27,7 @@ valid_features = [
     OptionChoice(name="VC Chats", value="VC Chats"),
     OptionChoice(name="Track Time", value="Track Time")
 ]
-__version__ = "0.0.8.001"
+__version__ = "0.1.0+"
 
 class HighClass(commands.Cog):
     def __init__(self, bot):
@@ -34,17 +36,19 @@ class HighClass(commands.Cog):
 
 @bot.event
 async def on_ready():
-    global act_list, start_time
+    global act_list, start_time, guild_features
     # 0 -> Time
     # 1 -> Member Locked
     # 2 -> Cooldown
     # 3 -> Online Time
-
+    guild_features = {}
     for guilds in bot.guilds:
+        guild_features[guilds] = features
         for members in guilds.members:
             if members not in act_list.keys():
                 act_list[members] = [datetime.now(), False,
-                                     [datetime.now(), datetime.now() - timedelta(minutes=30), datetime.now() - timedelta(minutes=30)], [timedelta(seconds=0)]]
+                                     [datetime.now(), datetime.now() - timedelta(minutes=30), datetime.now() - timedelta(minutes=30)],
+                                     [timedelta(seconds=0)]]
 
     start_time = datetime.now()
     print("Ready!")
@@ -348,8 +352,14 @@ async def on_member_remove(member):
 @bot.bridge_command(name="switch", description="Enables/Disables features")
 async def switch(ctx, feature: discord.Option(str, "Which feature are you changing?", choices=valid_features)):
     global features
-    features[feature] = not features[feature]
-    await ctx.respond("Action Completed!")
+    if ctx.author.guild_permissions.administrator:
+        guild_features[ctx.guild][feature] = not guild_features[ctx.guild][feature]
+        await ctx.respond(f"Action Complete! Variable set to: {guild_features[ctx.guild][feature]}")
+    else:
+        await ctx.respond(f"You don't have permissions to commit this action.")
+
+
+
 
 runThread = threading.Thread(target=run)
 bot.add_cog(Fun(bot))

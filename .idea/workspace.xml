@@ -31,9 +31,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6910e76-1f34-455b-8b63-2bcc98fa9ae3" name="Default Changelist" comment="Added files">
+      <change afterPath="$PROJECT_DIR$/save_data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tester.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Time_Bot_Discord.py" beforeDir="false" afterPath="$PROJECT_DIR$/Time_Bot_Discord.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heavy_variables/environment.env" beforeDir="false" afterPath="$PROJECT_DIR$/heavy_variables/environment.env" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +87,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -93,7 +95,7 @@
       <recent name="C:\Users\Owner\Desktop\Coding\DiscordBots\heavy_variables" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.tester">
     <configuration name="Time_Bot_Discord" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DiscordBots" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -115,9 +117,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tester" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DiscordBots" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tester.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Time_Bot_Discord" />
+        <item itemvalue="Python.tester" />
         <item itemvalue="Python.Time_Bot_Discord" />
         <item itemvalue="Python.Time_Bot_Discord" />
         <item itemvalue="Python.Time_Bot_Discord" />
@@ -342,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647306111285</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Fixing a lot of things">
+      <created>1650848090592</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1650848090592</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -416,7 +446,8 @@
     <MESSAGE value="Fix process (1)" />
     <MESSAGE value="First commit" />
     <MESSAGE value="Added intents.messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added intents.messages" />
+    <MESSAGE value="Fixing a lot of things" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing a lot of things" />
   </component>
   <component name="WindowStateProjectService">
     <state x="237" y="228" width="561" height="272" key="#Notifications" timestamp="1643943180603">
@@ -439,85 +470,57 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="365" y="236" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1647465689131" />
-    <state width="1325" height="194" key="GridCell.Tab.0.bottom" timestamp="1650848022012">
+    <state width="1325" height="194" key="GridCell.Tab.0.bottom" timestamp="1652489078215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1325" height="194" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1650848022012" />
-    <state width="1325" height="194" key="GridCell.Tab.0.center" timestamp="1650848022012">
+    <state width="1325" height="194" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1652489078215" />
+    <state width="1325" height="194" key="GridCell.Tab.0.center" timestamp="1652489078215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1325" height="194" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1650848022012" />
-    <state width="1325" height="194" key="GridCell.Tab.0.left" timestamp="1650848022012">
+    <state width="1325" height="194" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1652489078215" />
+    <state width="1325" height="194" key="GridCell.Tab.0.left" timestamp="1652489078215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1325" height="194" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1650848022012" />
-    <state width="1325" height="194" key="GridCell.Tab.0.right" timestamp="1650848022012">
+    <state width="1325" height="194" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1652489078215" />
+    <state width="1325" height="194" key="GridCell.Tab.0.right" timestamp="1652489078215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1325" height="194" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1650848022012" />
-    <state width="1325" height="222" key="GridCell.Tab.1.bottom" timestamp="1650841436434">
+    <state width="1325" height="194" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1652489078215" />
+    <state width="1325" height="222" key="GridCell.Tab.1.bottom" timestamp="1650848271877">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1325" height="222" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1650841436434" />
-    <state width="1325" height="222" key="GridCell.Tab.1.center" timestamp="1650841436434">
+    <state width="1325" height="222" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1650848271877" />
+    <state width="1325" height="222" key="GridCell.Tab.1.center" timestamp="1650848271877">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1325" height="222" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1650841436434" />
-    <state width="1325" height="222" key="GridCell.Tab.1.left" timestamp="1650841436434">
+    <state width="1325" height="222" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1650848271877" />
+    <state width="1325" height="222" key="GridCell.Tab.1.left" timestamp="1650848271877">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1325" height="222" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1650841436434" />
-    <state width="1325" height="222" key="GridCell.Tab.1.right" timestamp="1650841436434">
+    <state width="1325" height="222" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1650848271877" />
+    <state width="1325" height="222" key="GridCell.Tab.1.right" timestamp="1650848271877">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1325" height="222" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1650841436434" />
-    <state x="449" y="85" key="RollbackChangesDialog" timestamp="1642810162579">
+    <state width="1325" height="222" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1650848271877" />
+    <state x="192" y="20" width="916" height="708" key="SettingsEditor" timestamp="1652318734631">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="449" y="85" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1642810162579" />
-    <state x="192" y="20" width="916" height="708" key="SettingsEditor" timestamp="1647738648854">
+    <state x="192" y="20" width="916" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1652318734631" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1650848109172">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="192" y="20" width="916" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1647738648854" />
-    <state x="530" y="279" key="VCS.ChangelistChooser" timestamp="1642813851614">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1650848109172" />
+    <state x="489" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1652221069299">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="530" y="279" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1642813851614" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1647820834826">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1647820834826" />
-    <state x="488" y="279" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1642809909320">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="488" y="279" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1642809909320" />
-    <state x="482" y="226" key="git4idea.rebase.GitRebaseDialog" timestamp="1642809728241">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="482" y="226" key="git4idea.rebase.GitRebaseDialog/0.0.1366.728@0.0.1366.728" timestamp="1642809728241" />
-    <state x="457" y="255" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1642809763669">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="457" y="255" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728@0.0.1366.728" timestamp="1642809763669" />
-    <state x="443" y="154" key="git4idea.ui.GitUnstashDialog" timestamp="1642809740817">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="443" y="154" key="git4idea.ui.GitUnstashDialog/0.0.1366.728@0.0.1366.728" timestamp="1642809740817" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1642809919439">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1642809919439" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1642810020266">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1642810020266" />
+    <state x="489" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1652221069299" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Time_Bot_Discord.py</url>
-          <line>67</line>
+          <line>71</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
