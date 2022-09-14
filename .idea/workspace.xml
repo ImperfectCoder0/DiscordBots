@@ -35,6 +35,7 @@
       <change afterPath="$PROJECT_DIR$/tester.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Time_Bot_Discord.py" beforeDir="false" afterPath="$PROJECT_DIR$/Time_Bot_Discord.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heavy_variables/environment.env" beforeDir="false" afterPath="$PROJECT_DIR$/heavy_variables/environment.env" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,15 +87,17 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\Desktop\Coding\DiscordBots" />
+      <recent name="C:\Users\Owner\Desktop\Coding\DiscordBots\data-constructor" />
       <recent name="C:\Users\Owner\Desktop\Coding\DiscordBots\.idea" />
       <recent name="C:\Users\Owner\Desktop\Coding\DiscordBots\heavy_variables" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Time_Bot_Discord">
+  <component name="RunManager" selected="Python.tester">
     <configuration name="Time_Bot_Discord" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DiscordBots" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -128,7 +131,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tester.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Owner\Desktop\Coding\DiscordBots\tester.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -139,8 +142,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Time_Bot_Discord" />
         <item itemvalue="Python.tester" />
+        <item itemvalue="Python.Time_Bot_Discord" />
         <item itemvalue="Python.Time_Bot_Discord" />
         <item itemvalue="Python.Time_Bot_Discord" />
         <item itemvalue="Python.Time_Bot_Discord" />
@@ -464,10 +467,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Bug fixes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="237" y="228" width="561" height="272" key="#Notifications" timestamp="1643943180603">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="237" y="228" width="561" height="272" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1643943180603" />
     <state x="113" y="19" width="1042" height="590" key="#Project_Structure" timestamp="1647465872284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -484,42 +483,42 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="365" y="236" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1647465689131" />
-    <state width="1325" height="194" key="GridCell.Tab.0.bottom" timestamp="1652493381750">
+    <state width="1325" height="222" key="GridCell.Tab.0.bottom" timestamp="1653778846548">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1325" height="194" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1652493381750" />
-    <state width="1325" height="194" key="GridCell.Tab.0.center" timestamp="1652493381750">
+    <state width="1325" height="222" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1653778846548" />
+    <state width="1325" height="222" key="GridCell.Tab.0.center" timestamp="1653778846548">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1325" height="194" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1652493381750" />
-    <state width="1325" height="194" key="GridCell.Tab.0.left" timestamp="1652493381750">
+    <state width="1325" height="222" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1653778846548" />
+    <state width="1325" height="222" key="GridCell.Tab.0.left" timestamp="1653778846548">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1325" height="194" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1652493381750" />
-    <state width="1325" height="194" key="GridCell.Tab.0.right" timestamp="1652493381750">
+    <state width="1325" height="222" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1653778846548" />
+    <state width="1325" height="222" key="GridCell.Tab.0.right" timestamp="1653778846548">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1325" height="194" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1652493381750" />
-    <state width="1325" height="222" key="GridCell.Tab.1.bottom" timestamp="1650848271877">
+    <state width="1325" height="222" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1653778846548" />
+    <state width="1325" height="222" key="GridCell.Tab.1.bottom" timestamp="1653778846548">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1325" height="222" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1650848271877" />
-    <state width="1325" height="222" key="GridCell.Tab.1.center" timestamp="1650848271877">
+    <state width="1325" height="222" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1653778846548" />
+    <state width="1325" height="222" key="GridCell.Tab.1.center" timestamp="1653778846548">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1325" height="222" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1650848271877" />
-    <state width="1325" height="222" key="GridCell.Tab.1.left" timestamp="1650848271877">
+    <state width="1325" height="222" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1653778846548" />
+    <state width="1325" height="222" key="GridCell.Tab.1.left" timestamp="1653778846548">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1325" height="222" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1650848271877" />
-    <state width="1325" height="222" key="GridCell.Tab.1.right" timestamp="1650848271877">
+    <state width="1325" height="222" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1653778846548" />
+    <state width="1325" height="222" key="GridCell.Tab.1.right" timestamp="1653778846548">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1325" height="222" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1650848271877" />
-    <state x="192" y="20" width="916" height="708" key="SettingsEditor" timestamp="1652318734631">
+    <state width="1325" height="222" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1653778846548" />
+    <state x="192" y="20" width="916" height="708" key="SettingsEditor" timestamp="1652833538756">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="192" y="20" width="916" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1652318734631" />
+    <state x="192" y="20" width="916" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1652833538756" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1652492754245">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

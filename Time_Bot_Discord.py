@@ -362,7 +362,6 @@ async def switch(ctx, feature: discord.Option(str, "Which feature are you changi
     else:
         await ctx.respond(f"You don't have permissions to commit this action.")
 
-    await ctx.respond(guild_features)
 
 
 
